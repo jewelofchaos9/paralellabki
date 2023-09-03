@@ -49,7 +49,6 @@
         
         B --> C{"array[i] == target"}
         C -->|Да| D["index = i"]
-        D --> E(выход)
         C -->|Нет| B
 ```
 
