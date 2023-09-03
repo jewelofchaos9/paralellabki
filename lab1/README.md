@@ -74,11 +74,11 @@ n - длина массива чисел</p>
 Если бы ее не было то цикл выполнился бы thread раз, каждый раз находя один и тот же максимальный элемент.<br><br>
 <h3>Ускорение и эффективность</h3>
 
-![AvgTime]()
+![AvgTime](https://github.com/jewelofchaos9/paralellabki/blob/main/lab1/AVG_time.png)
 
-![Acceleration]()
+![Acceleration](https://github.com/jewelofchaos9/paralellabki/blob/main/lab1/acceleration.png)
 
-![Efficiency]()
+![Efficiency](https://github.com/jewelofchaos9/paralellabki/blob/main/lab1/efficiency.png)
 
 
 <h3>Заключение</h3>
