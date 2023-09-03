@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from abc import ABC
 
 AVG_RUNS = 30
-MAX_SYSTEM_THREADS = 16
+MAX_SYSTEM_THREADS = 8
 MAX_TEST_THREAD = 30
 
 
