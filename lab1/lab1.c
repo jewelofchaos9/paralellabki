@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 #include<sys/time.h>
 
 long long timeInMilliseconds(void) {
@@ -11,8 +12,7 @@ long long timeInMilliseconds(void) {
 
 int main(int argc, char** argv)
 {
-  const int count = 20000000;     ///< Number of array elements
-
+  const int count = 10000000;     ///< Number of array elements
   if (argc < 3){
     puts("USAGE ./a.out {THREADS_NUM} {SEED}");
     return -1;
@@ -40,6 +40,5 @@ int main(int argc, char** argv)
           if(array[i] > max) { max = array[i]; };
       }
   }
-
   return timeInMilliseconds() - time_start;
 }
