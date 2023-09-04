@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<sys/time.h>
+#include <time.h>
 long long timeInMilliseconds(void) {
     struct timeval tv;
 
@@ -32,12 +33,8 @@ long long main(int argc, char** argv)
    * */
 
   array = (int*)malloc(count*sizeof(int));
-  #pragma omp parallel num_threads(threads) shared(array, count)
-  { 
-    #pragma omp for
-    for(int i=0; i<count; i++){ 
-      array[i] = rand(); 
-    }
+  for(int i=0; i<count; i++){ 
+    array[i] = rand(); 
   }
 
   /* Find the index of the element */
@@ -55,6 +52,7 @@ long long main(int argc, char** argv)
         if(array[i] == target)
         {
             index = i;
+            #pragma omp cancel for
         }
     }
   }
