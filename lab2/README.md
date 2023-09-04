@@ -75,11 +75,11 @@
 ![Efficiency](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/efficiency.png)
 <h3>Ускорение и эффективность без использования cancel for</h3>
 
-![AvgTime](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/AVG_time_bac.png)
+![AvgTime](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/AVG_time_bcp.png)
 
-![Acceleration](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/acceleration_bac.png)
+![Acceleration](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/acceleration_bcp.png)
 
-![Efficiency](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/efficiency_bac.png)
+![Efficiency](https://github.com/jewelofchaos9/paralellabki/blob/main/lab2/efficiency_bcp.png)
 
 <h3> Дополнительные вопросы</h3>
 <h4> Почему график теоретической эффективность потока принимает такой вид?</h4>
