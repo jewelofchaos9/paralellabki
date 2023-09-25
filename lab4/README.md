@@ -86,7 +86,7 @@ Dynamic<br>
 Dynamic 10<br>
 ![AvgTime](src/AVG_time_dynamic10.png)
 Dynamic 1000<br>
-![AvgTime](src/AVG_time_dynamic1000.png)
+![AvgTime](src/AVG_time_dynamic10000.png)
 
 
 Guided <br>
