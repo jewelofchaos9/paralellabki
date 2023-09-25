@@ -75,26 +75,26 @@ int main(){
   - 1000
 
 Static<br>
-![Static](src/AVG_TIME_sch.png)
+![Static](src/AVG_time_sch.png)
 Static 10<br>
-![Static](src/AVG_TIME_sch10.png)
+![Static](src/AVG_time_sch10.png)
 Static 1000<br>
-![Static](src/AVG_TIME_sch1000.png)
+![Static](src/AVG_time_sch1000.png)
 
 Dynamic<br>
-![AvgTime](src/AVG_TIME_dynamic.png)
+![AvgTime](src/AVG_time_dynamic.png)
 Dynamic 10<br>
-![AvgTime](src/AVG_TIME_dynamic10.png)
+![AvgTime](src/AVG_time_dynamic10.png)
 Dynamic 1000<br>
-![AvgTime](src/AVG_TIME_dynamic1000.png)
+![AvgTime](src/AVG_time_dynamic1000.png)
 
 
 Guided <br>
-![AvgTime](src/AVG_TIME_guided.png)
+![AvgTime](src/AVG_time_guided.png)
 Guided <br>
-![AvgTime](src/AVG_TIME_guided10.png)
+![AvgTime](src/AVG_time_guided10.png)
 Guided <br>
-![AvgTime](src/AVG_TIME_guided1000.png)
+![AvgTime](src/AVG_time_guided1000.png)
 
 ## Заключение
 
