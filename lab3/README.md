@@ -81,52 +81,7 @@
 
 
 ## Приложение
-### Оценка работы последовательной программы
-```c
-            for(int j=i; j>=gap  && array[j-gap] > array[j]; j-=gap){
-                int tmp = array[j];
-                array[j] = array[j-gap];
-                array[j-gap] = tmp;
-            }
-        }
-    }
-    t2 = omp_get_wtime();
-    return t2 - t1;
-}
- 
-
-int main(){
-    int count = 100000;
-    unsigned int random_seed = 1337;
-    const int num_exp = 10;
-    
-    int**arrays = NULL;
-    int* array = NULL;
-
-    arrays = (int**)calloc(num_exp, sizeof(int*));
-    for(int t = 0; t < num_exp; t++){
-        arrays[t] = (int*)calloc(count, sizeof(int));
-        new_array(arrays[t], &random_seed, count);
-    }
-
-    double t1, t2, res = 0.0;
-    for(int e = 0; e < num_exp; e++){ 
-        fprintf(stderr, "Number of experiment: %d/%d\n", e+1, num_exp);
-        array = arrays[e];
-        res += shellsort(array, count);
-    }
-//    printf("Num of iterations: %d, count: %d\n", r, count);
-    res /= (double)(num_exp);
-    fprintf(stdout, "%g", res); 
-
-    for(int t = 0; t < num_exp; t++){
-        free(arrays[t]);
-    }
-    free(arrays);
-    return 0;
-}
-
-```
+### Оценка работы последовательной программы производилось при использовании параллельной программы с одним потоком.
 ### Оценка работы параллельной программы
 
 ```c
