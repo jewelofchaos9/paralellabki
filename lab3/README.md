@@ -27,22 +27,8 @@
 
 ## Анализ алгоритма
 #### Принцип работы
-
-#### Блок-схема
-
-```mermaid
-%%{ init : { "flowchart" : "curve" : {"stepAfter", "diagramPadding" : 20}}%%
-	graph LR
-		A(Начало) --> |"gap=n/2"|B{"gap <= n/2 && gap >= 1]"}
-        B --> |"true:i=gap"|C{"i >= gap && i < n)"}
-        B --> |false|F(Выход)
-        C --> |"true:j=i"|D{"j >= gap && array[j-gap] > array[j]"}
-        C --> |"false:gap/=2"|B
-        D --> |true|E["swap(array[j], array[j-gap])"]
-        D --> |"false:i++"|C
-        E --> |"j-=gap"|D
-```
-
+## Блок схема
+![BlockScheme](blockscheme.png)
 
 ## Значение директив
 <code>
@@ -60,8 +46,6 @@
 Всего эксперимент занял два часа <br>
 ![TimeSpent](timing.png)<br>
 
-## Блок схема
-![BlockScheme](blocksheme.png)
 ### Среднее время
 
 ![AvgTime](AVG_time.png)
