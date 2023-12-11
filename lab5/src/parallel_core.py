@@ -4,9 +4,9 @@ from logger import logger
 import matplotlib.pyplot as plt
 from abc import ABC
 
-AVG_RUNS = 10
+AVG_RUNS = 1
 MAX_SYSTEM_THREADS = 8
-MAX_TEST_THREAD = 12
+MAX_TEST_THREAD = 10
 
 
 class ParallelExecutor:
@@ -128,8 +128,8 @@ class Visualizer:
         self.data_core2 = Lab1DataCore(self.experimental_data2)
 
     def visualize_average_time(self, name="AVG_time.png"):
-        xt, yt = self.data_core.load_theoretical_average_time()
-        xp, yp = self.data_core2.load_theoretical_average_time()
+        xt, yt = self.data_core2.load_theoretical_average_time()
+        xp, yp = self.data_core.load_theoretical_average_time()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI AVG Time")
         ax.plot(xp, yp, label="OpenMP AVG Time")
@@ -139,8 +139,8 @@ class Visualizer:
         fig.savefig(name)
 
     def visualize_acceleration(self, name="acceleration.png"):
-        xt, yt = self.data_core.load_practical_acceleration()
-        xp, yp = self.data_core2.load_practical_acceleration()
+        xt, yt = self.data_core2.load_practical_acceleration()
+        xp, yp = self.data_core.load_practical_acceleration()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI Acceleration")
         ax.plot(xp, yp, label="OpenMP Acceleration")
@@ -150,8 +150,8 @@ class Visualizer:
         fig.savefig(name)
 
     def visualize_efficiency(self, name="efficiency.png"):
-        xt, yt = self.data_core.load_theoretical_efficiency()
-        xp, yp = self.data_core2.load_theoretical_efficiency()
+        xt, yt = self.data_core2.load_theoretical_efficiency()
+        xp, yp = self.data_core.load_theoretical_efficiency()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI Efficiency")
         ax.plot(xp, yp, label="OpenMP Efficiency")
