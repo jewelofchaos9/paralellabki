@@ -4,9 +4,9 @@ from logger import logger
 import matplotlib.pyplot as plt
 from abc import ABC
 
-AVG_RUNS = 1
+AVG_RUNS = 5
 MAX_SYSTEM_THREADS = 8
-MAX_TEST_THREAD = 10
+MAX_TEST_THREAD = 12
 
 
 class ParallelExecutor:
