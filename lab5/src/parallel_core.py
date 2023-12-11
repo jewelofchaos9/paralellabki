@@ -128,8 +128,8 @@ class Visualizer:
         self.data_core2 = Lab1DataCore(self.experimental_data2)
 
     def visualize_average_time(self, name="AVG_time.png"):
-        xt, yt = self.data_core2.load_theoretical_average_time()
-        xp, yp = self.data_core.load_theoretical_average_time()
+        xt, yt = self.data_core2.load_practical_average_time()
+        xp, yp = self.data_core.load_practical_average_time()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI AVG Time")
         ax.plot(xp, yp, label="OpenMP AVG Time")
@@ -150,8 +150,8 @@ class Visualizer:
         fig.savefig(name)
 
     def visualize_efficiency(self, name="efficiency.png"):
-        xt, yt = self.data_core2.load_theoretical_efficiency()
-        xp, yp = self.data_core.load_theoretical_efficiency()
+        xt, yt = self.data_core2.load_practical_efficiency()
+        xp, yp = self.data_core.load_practical_efficiency()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI Efficiency")
         ax.plot(xp, yp, label="OpenMP Efficiency")
