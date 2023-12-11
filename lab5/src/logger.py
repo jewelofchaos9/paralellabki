@@ -1,5 +1,4 @@
 from loguru import logger
-from fastapi import Request
 import os
 import sys
 

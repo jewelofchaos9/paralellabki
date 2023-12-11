@@ -4,9 +4,9 @@ from logger import logger
 import matplotlib.pyplot as plt
 from abc import ABC
 
-AVG_RUNS = 20
+AVG_RUNS = 10
 MAX_SYSTEM_THREADS = 8
-MAX_TEST_THREAD = 30
+MAX_TEST_THREAD = 12
 
 
 class ParallelExecutor:
@@ -19,7 +19,7 @@ class ParallelExecutor:
             seed = randrange(0, 2**16)
             p = subprocess.run([self.program, str(threads_num), str(seed)], stdout=subprocess.PIPE)
             out = p.stdout
-            timings.append(float(out))
+            timings.append(float(out.strip()))
             logger.info(f"subprocess with {threads_num} threads finished with timing {out}")
 
         return sum(timings) / len(timings)
@@ -28,9 +28,9 @@ class ParallelExecutor:
         timings = []
         for _ in range(AVG_RUNS):
             seed = randrange(0, 2**16)
-            p = subprocess.run(['mpicc', '-c', str(threads_num), self.program,  str(seed)], stdout=subprocess.PIPE)
+            p = subprocess.run(['mpirun', '--hostfile', 'hostfile', '-n', str(threads_num),'./lab5',  str(seed)], stdout=subprocess.PIPE)
             out = p.stdout
-            timings.append(float(out))
+            timings.append(float(out.strip()))
             logger.info(f"subprocess with mpi {threads_num} threads finished with timing {out}")
 
         return sum(timings) / len(timings)
@@ -162,7 +162,7 @@ class Visualizer:
 
 
 def main():
-    v = Visualizer('./a.out', './b.out')
+    v = Visualizer('./lab1', './lab5')
     v.visualize_average_time()
     v.visualize_efficiency()
     v.visualize_acceleration()

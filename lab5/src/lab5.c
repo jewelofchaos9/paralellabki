@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 	int size = -1;	///< Total number of processors
 	int rank = -1;	///< This processor's number
 
-	const int count = 1000000; ///< Number of array elements
+	const int count = 100000000;; ///< Number of array elements
 
 	int* array = 0; ///< The array we need to find the max in
 	int lmax = -1;	///< Local maximums
@@ -44,10 +44,10 @@ int main(int argc, char** argv)
 	}
 
 	MPI_Reduce(&lmax, &max, 1, MPI_INTEGER, MPI_MAX, 0, MPI_COMM_WORLD);
+	  end = MPI_Wtime();
 	ret = MPI_Finalize();
-  end = MPI_Wtime();
   if (!rank) {
-    printf("%g", end-start);
+    printf("%g\n", end-start);
   }
 	return(0);
 }
