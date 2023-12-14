@@ -1,3 +1,4 @@
+```
             .-/+oossssoo+/-.               defkit@parprog
         `:+ssssssssssssssssss+:`           --------------
       -+ssssssssssssssssssyyssss+-         OS: Ubuntu 22.04.3 LTS x86_64
@@ -18,3 +19,4 @@ ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: Intel Xeon (Icelake) (8) @ 1.995
       -+sssssssssssssssssyyyssss+-
         `:+ssssssssssssssssss+:`
             .-/+oossssoo+/-.
+```
