@@ -50,8 +50,7 @@ p - число используемых потоков<br>
 
 ## Приложение
 ### Оценка работы параллельной программы
-```c
-#include <stdlib.h>
+```c#include <stdlib.h>
 #include <stdio.h>
 #include <mpi.h>
 #include <omp.h>
@@ -104,7 +103,9 @@ int main(int argc, char** argv)
   }
 	return(0);
 }
-``` <br>
+```
+
+<br>
 
 ### Программа для запуска и анализа данных
 ```py
