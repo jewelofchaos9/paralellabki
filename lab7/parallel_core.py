@@ -120,7 +120,7 @@ class Lab1DataCore(ABCDataCore):
 
 class Visualizer:
     def __init__(self, binary_name: str, binary_name2: str):
-        self.executor = ParallelExecutor(binary_name)
+        #self.executor = ParallelExecutor(binary_name)
         self.executor2 = ParallelExecutor(binary_name2)
         self.experimental_data2 = self.executor2.get_graph_experemental_info(mpi=True)
         #self.experimental_data = self.executor.get_graph_experemental_info()
@@ -138,10 +138,8 @@ class Visualizer:
 
     def visualize_acceleration(self, name="acceleration.png"):
         xt, yt = self.data_core2.load_practical_acceleration()
-        xp, yp = self.data_core.load_practical_acceleration()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI Acceleration")
-        ax.plot(xp, yp, label="OpenMP Acceleration")
         ax.set_xlabel("Threads")
         ax.set_ylabel("Acceleration")
         ax.legend()
@@ -149,10 +147,8 @@ class Visualizer:
 
     def visualize_efficiency(self, name="efficiency.png"):
         xt, yt = self.data_core2.load_practical_efficiency()
-        xp, yp = self.data_core.load_practical_efficiency()
         fig, ax = plt.subplots(layout='constrained')
         ax.plot(xt, yt, label="MPI Efficiency")
-        ax.plot(xp, yp, label="OpenMP Efficiency")
         ax.set_xlabel("Threads")
         ax.set_ylabel("Efficiency")
         ax.legend()
@@ -162,6 +158,8 @@ class Visualizer:
 def main():
     v = Visualizer('./lab3', './lab7')
     v.visualize_average_time()
+    v.visualize_acceleration()
+    v.visualize_efficiency()
 
 if __name__ == "__main__":
     main()
