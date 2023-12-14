@@ -1,0 +1,3 @@
+/home/defkit/paralellabki/lab7/src/parallel/CMakeFiles/lab7.out.dir
+/home/defkit/paralellabki/lab7/src/parallel/CMakeFiles/edit_cache.dir
+/home/defkit/paralellabki/lab7/src/parallel/CMakeFiles/rebuild_cache.dir

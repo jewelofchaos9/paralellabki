@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/lab7.out.dir/lab.c.o -o lab7.out  -lm /usr/lib/x86_64-linux-gnu/libmpich.so /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 
