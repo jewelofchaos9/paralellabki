@@ -4,7 +4,7 @@ from logger import logger
 import matplotlib.pyplot as plt
 from abc import ABC
 
-AVG_RUNS = 5
+AVG_RUNS = 15
 MAX_SYSTEM_THREADS = 8
 MAX_TEST_THREAD = 12
 
